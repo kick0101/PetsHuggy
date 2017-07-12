@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
 gem 'rails', '4.2.6'
-gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -19,6 +18,15 @@ gem 'omniauth-facebook'
 gem "paperclip", "~> 5.0.0"
 gem 'dropzonejs-rails'
 gem "figaro", "~> 1.1.0"
+
+group :production do
+    gem 'pg'
+    gem 'rails_12factor'
+end
+
+group :development,:test do
+    gem 'sqlite3'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
