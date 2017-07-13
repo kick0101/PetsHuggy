@@ -78,7 +78,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   #remember to change localhost to actual host
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-end
 
 config.paperclip_defaults = {
   storage: :s3,
@@ -90,3 +89,5 @@ config.paperclip_defaults = {
     s3_region: ENV.fetch('AWS_REGION'),
   }
 }
+
+end
